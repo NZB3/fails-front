@@ -1,0 +1,23 @@
+.count-display {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.reset {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* This makes it a circle */
+    background-color: #ff0000; /* Red color */
+    color: #ffffff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px; /* Centers the text vertically */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensures it behaves like a block element */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow */
+}
+
+.reset:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
