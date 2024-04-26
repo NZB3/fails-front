@@ -1,4 +1,4 @@
-const serverHost = "localhost"
+const serverHost = "80.90.187.50"
 const serverPort = "8080"
 const resetRoute = "fail"
 const getCountRoute = "/"
