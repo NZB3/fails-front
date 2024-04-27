@@ -1,4 +1,4 @@
-const serverAddress = "https://nzb3.github.io/without_fails_counter-back"
+const serverAddress = "https://zebra-unbiased-puma.ngrok-free.app"
 const resetRoute = "fail"
 const getCountRoute = "/"
 
