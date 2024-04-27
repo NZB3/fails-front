@@ -1,10 +1,9 @@
-const serverHost = "80.90.187.50"
-const serverPort = "8080"
+const serverAddress = "https://nzb3.github.io/without_fails_counter-back"
 const resetRoute = "fail"
 const getCountRoute = "/"
 
 async function getCount() {
-    fetch(`http://${serverHost}:${serverPort}/`)
+    fetch(`${serverAddress}${getCountRoute}`)
         .then((response) => {
             console.log(response)
             return response.json()
@@ -19,7 +18,7 @@ async function getCount() {
 }
 
 async function postReset() {
-    const response = await fetch("http://"+serverHost+":"+serverPort+resetRoute, {
+    const response = await fetch(`${serverAddress}${resetRoute}`, {
         method: "POST",
         body: JSON.stringify({}),
         headers: {
