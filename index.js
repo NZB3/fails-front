@@ -3,7 +3,12 @@ const resetRoute = "/fail"
 const getCountRoute = "/"
 
 async function getCount() {
-    fetch(`${serverAddress}${getCountRoute}`)
+    fetch(`${serverAddress}${getCountRoute}`, {
+        method: "GET",
+        headers: {
+            "ngrok-skip-browser-warning":"",
+        }
+    })
         .then((response) => {
             console.log(response)
             return response.json()
@@ -13,7 +18,7 @@ async function getCount() {
             counterDisplay.innerHTML = data.count
         })
         .catch(error => {
-            console.error('Error fetching data:', error);
+            console.log(error)
         });
 }
 
@@ -22,7 +27,8 @@ async function postReset() {
         method: "POST",
         body: JSON.stringify({}),
         headers: {
-            "Content-type": "application/json; charset=UTF-8"
+            "Content-type": "application/json; charset=UTF-8",
+            "ngrok-skip-browser-warning":""
         }
     })
 }
