@@ -1,5 +1,5 @@
 const serverAddress = "https://zebra-unbiased-puma.ngrok-free.app"
-const resetRoute = "fail"
+const resetRoute = "/fail"
 const getCountRoute = "/"
 
 async function getCount() {
