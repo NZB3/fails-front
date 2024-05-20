@@ -1,4 +1,4 @@
-const serverAddress = "https://zebra-unbiased-puma.ngrok-free.app"
+const serverAddress = "https://days-without-fails.nzb3.su"
 const resetRoute = "/fail"
 const getCountRoute = "/"
 
@@ -6,8 +6,8 @@ async function getCount() {
     fetch(`${serverAddress}${getCountRoute}`, {
         method: "GET",
         headers: {
-            "ngrok-skip-browser-warning":"",
-        }
+            "Content-Type": "application/json",
+        },
     })
         .then((response) => {
             console.log(response)
