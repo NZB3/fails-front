@@ -23,14 +23,16 @@ async function getCount() {
 }
 
 async function postReset() {
-    const response = await fetch(`${serverAddress}${resetRoute}`, {
-        method: "POST",
-        body: JSON.stringify({}),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8",
-            "ngrok-skip-browser-warning":""
-        }
-    })
+    if (confirm("Are you sure?")) {
+        const response = await fetch(`${serverAddress}${resetRoute}`, {
+            method: "POST",
+            body: JSON.stringify({}),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                "ngrok-skip-browser-warning":""
+            }
+        })
+    }
 }
 
 async function reset() {
